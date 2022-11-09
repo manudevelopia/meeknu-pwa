@@ -3,8 +3,8 @@ import { Menu } from "../menu";
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  templateUrl: './menu-detail.component.html',
+  styleUrls: ['./menu-detail.component.scss']
 })
 export class MenuDetailComponent implements OnInit {
   menu: Menu = {
