@@ -6,7 +6,7 @@ import { Menu } from "./menu";
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuDetailComponent implements OnInit {
   menu: Menu = {
     id: 1,
     name: 'My Menu',
