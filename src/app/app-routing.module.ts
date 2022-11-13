@@ -4,8 +4,9 @@ import {MenuListComponent} from "./menu/list/menu-list.component";
 import {MenuDetailComponent} from "./menu/detail/menu-detail.component";
 
 const routes: Routes = [
+  { path: '', redirectTo: '/menus', pathMatch: 'full' },
   { path: 'menus', component: MenuListComponent },
-  { path: 'menu', component: MenuDetailComponent }
+  { path: 'menu/:id', component: MenuDetailComponent },
 ];
 
 @NgModule({

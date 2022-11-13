@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Menu } from "../menu";
-import { MENUS } from "../mock-menus";
+import {Component, OnInit} from '@angular/core';
+import {Menu} from "../menu";
+import {MenuService} from "../../service/menu.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-menu-list',
@@ -8,14 +9,17 @@ import { MENUS } from "../mock-menus";
   styleUrls: ['./menu-list.component.scss']
 })
 export class MenuListComponent implements OnInit {
-  menus: Menu[] = MENUS
+  menus: Menu[] | [] |undefined;
 
-  constructor() { }
+  constructor(
+    private menuService: MenuService
+  ) {}
 
   ngOnInit(): void {
+    this.getMenus();
   }
 
-  onSelect(menu: Menu) {
-
+  getMenus() {
+    this.menuService.getMenus().subscribe(menus => this.menus = menus);
   }
 }

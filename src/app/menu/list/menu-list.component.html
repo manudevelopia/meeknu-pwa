@@ -1,5 +1,5 @@
 <ul>
   <li *ngFor="let menu of menus">
-    <div (click)="onSelect(menu)"><span>{{menu.name}}</span></div>
+    <div><span><a routerLink="/menu/{{menu.id}}">{{menu.name}}</a></span></div>
   </li>
 </ul>
